@@ -1,0 +1,242 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    z-index: 999;
+    background: transparent;
+}
+
+nav.sticky {
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+nav .logo a img {
+    max-height: 100px; /* Adjust the height as needed */
+}
+
+nav.sticky .logo a img {
+    /*filter: brightness(0) invert(1); !* Invert for better visibility on white *!*/
+}
+
+.nav-content .nav-links {
+    display: flex;
+}
+
+.nav-content .nav-links li {
+    list-style: none;
+    margin: 0 8px;
+}
+
+nav.sticky .nav-links li a {
+    color: black;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+nav.sticky .nav-links li a:hover {
+    color: #0e2431;
+}
+
+.login {
+    width: 110px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    padding: 5px 1px !important;
+}
+
+.login .arrowBtn {
+    background: #031426;
+    color: white;
+    height: 100%;
+}
+
+.login p {
+    margin: 0 10px;
+    color: black;
+    font-weight: 500 !important;
+}
+
+.login:hover .arrowBtn {
+    background: #fff;
+    color: black;
+}
+
+nav.sticky .login {
+    background: rgba(3, 20, 38, 0.1) !important;
+    color: black !important;
+}
+
+.lang_drop {
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    cursor: pointer;
+    margin-right: 40px !important;
+}
+.lang_drop , .login{
+    text-transform: none;
+}
+.nav-links .lang_drop:hover  {
+    border-bottom: none;
+}
+.nav-links .login-li:hover  {
+    border-bottom: none;
+}
+.nav-menu.active .lang_drop{
+    margin-right: 0 !important;}
+nav .nav-menu1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black !important;
+    margin-right: 30px;
+}
+nav .nav-menu1 ul:nth-child(1){
+    margin-right: 40px;
+}
+nav .nav-menu {
+    justify-content: space-around;
+    align-items: center;
+    color: black !important;
+}
+
+nav .nav-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav .nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu {
+    display: none;
+
+}
+
+nav button {
+    display: none;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    right: 5px;
+    z-index: 6;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+nav button svg {
+    font-size: 30px;
+}
+
+nav.sticky button svg {
+    color: black;
+}
+
+.nav-links {
+    text-transform: none;
+}
+.nav-links li{ padding: 10px 0;}
+.nav-links li:hover{
+        border-bottom: 1px white solid;
+
+}
+nav.sticky .nav-links li:hover{
+        border-bottom: 1px black solid;
+
+}
+
+
+.logo {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    nav{
+        padding: 24px 0;
+    }
+    nav.sticky, nav {
+        height: 60px;
+    }
+    nav button {
+        display: block;
+    }
+    .nav-menu1 {
+        display: none !important;
+    }
+
+    .logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -20px;
+        z-index: 9;
+    }
+
+    .nav-menu {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255);
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        right: -100%;
+        z-index: 5;
+        transition: 0.5s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-menu .nav-list a {
+        font-size: 25px !important;
+    }
+
+    .nav-menu a {
+        color: black !important;
+    }
+}
