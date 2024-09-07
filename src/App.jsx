@@ -91,8 +91,8 @@ function App() {
         msg += `\n телефон: ${initialState.tell}\n`;
 
 
-        const TOKEN = "6074522329:AAGMVIVFbWijL_BlKeeiVjCvouoG9HVC5w8";
-        const CHAT_ID = "-1001913731987";
+        const TOKEN = "TOKEN";
+        const CHAT_ID = "CHAT ID";
 
         axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
             chat_id: CHAT_ID,
